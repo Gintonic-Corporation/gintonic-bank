@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TransactionController">
+   <children>
+      <Label layoutX="417.0" layoutY="17.0" text="Gintonic Bank" AnchorPane.topAnchor="25.0">
+         <font>
+            <Font name="Century Gothic" size="36.0" />
+         </font>
+      </Label>
+      <Separator layoutX="-1.0" layoutY="70.0" prefHeight="20.0" prefWidth="1080.0" AnchorPane.topAnchor="70.0" />
+      <Label fx:id="usernameLabel" alignment="CENTER_RIGHT" layoutX="886.0" layoutY="28.0" prefHeight="22.0" prefWidth="150.0" text="User1" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="37.0">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="696.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="690.0" AnchorPane.topAnchor="10.0">
+         <image>
+            <Image url="@../../bin/GintonicCorpLogo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="467.0" layoutY="90.0" text="Átutalás">
+         <font>
+            <Font name="Lucida Bright" size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="senderAcc" layoutX="150.0" layoutY="217.0" promptText="Számlaszám" AnchorPane.leftAnchor="150.0">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="150.0" layoutY="186.0" text="Küldő számlaszám" AnchorPane.leftAnchor="150.0">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="receiverAcc" layoutX="150.0" layoutY="337.0" promptText="Számlaszám">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="150.0" layoutY="306.0" text="Fogadó számlaszám">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="receiverName" layoutX="150.0" layoutY="418.0" promptText="Név">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="150.0" layoutY="387.0" text="Fogadó neve">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="transferAmount" layoutX="148.0" layoutY="509.0" promptText="Összeg">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="148.0" layoutY="478.0" text="Átutalni kívánt összeg">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="274.0" layoutY="569.0" mnemonicParsing="false" onAction="#transferMoney" style="-fx-background-color: #1bc6f5;" text="Átutalás">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.QueryController">
+   <children>
+      <Label layoutX="418.0" layoutY="25.0" text="Gintonic Bank" AnchorPane.topAnchor="25.0">
+         <font>
+            <Font name="Century Gothic" size="36.0" />
+         </font>
+      </Label>
+      <Separator layoutY="78.0" prefHeight="20.0" prefWidth="1080.0" AnchorPane.topAnchor="70.0" />
+      <Label fx:id="usernameLabel" alignment="CENTER_RIGHT" layoutX="887.0" layoutY="36.0" prefHeight="22.0" prefWidth="150.0" text="User1" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="37.0">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="697.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="690.0" AnchorPane.topAnchor="10.0">
+         <image>
+            <Image url="@../../bin/GintonicCorpLogo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="394.0" layoutY="90.0" text="Adatok keresése">
+         <font>
+            <Font name="Lucida Bright" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="153.0" layoutY="179.0" text="Azonosító/Számlaszám alapján" AnchorPane.leftAnchor="150.0">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchID" layoutX="150.0" layoutY="233.0" promptText="Azonosító">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="searchAccount" layoutX="150.0" layoutY="279.0" promptText="Számlaszám">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font>
+      </TextField>
+      <Button layoutX="280.0" layoutY="325.0" mnemonicParsing="false" onAction="#searchToModify" style="-fx-background-color: #1bc6f5;" text="Keresés">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="searchKW" layoutX="150.0" layoutY="432.0" prefHeight="35.0" prefWidth="442.0" promptText="Név, cím, telefon stb...">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="150.0" layoutY="392.0" text="Egyéb adat alapján" AnchorPane.leftAnchor="150.0">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="customerTable" layoutX="150.0" layoutY="477.0" prefHeight="200.0" prefWidth="864.0">
+        <columns>
+          <TableColumn fx:id="ID_Coll" editable="false" prefWidth="75.0" text="Azonosító" />
+          <TableColumn fx:id="name_Coll" editable="false" prefWidth="75.0" text="Név" />
+            <TableColumn fx:id="mother_Coll" editable="false" prefWidth="75.0" text="Anyja neve" />
+            <TableColumn fx:id="bplace_Coll" editable="false" prefWidth="87.0" text="Születési hely" />
+            <TableColumn fx:id="bdate_Coll" editable="false" prefWidth="90.0" text="Születési idő" />
+            <TableColumn fx:id="haddress_Coll" editable="false" prefWidth="197.0" text="Lakcím" />
+            <TableColumn fx:id="email_Coll" editable="false" prefWidth="129.0" text="E-mail" />
+            <TableColumn fx:id="phone_Coll" editable="false" prefWidth="135.0" text="Telefonszám" />
+        </columns>
+      </TableView>
+      <Button layoutX="592.0" layoutY="432.0" mnemonicParsing="false" onAction="#refreshList" style="-fx-background-color: #1bc6f5;" text="Frissítés">
+         <font>
+            <Font name="Lucida Bright" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

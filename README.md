@@ -17,6 +17,11 @@ Ez után megjelenik a kezdőlap, ahol a program különböző funkciói között
 
 A fejlesztéshez az Eclipse IDE-t használtuk, a JavaFx grafikus felületek megalkotásához pedig a Scene Builder nevű alkalmazást.
 
+```Java
+  System.out.println("Hello, world!");
 
----
+```
+
+***A program futtatásához a JavaFx telepítése szükséges***
+
 <p align="right">Minden jog fenntartva. Gintonic Corporation 2022</p>
